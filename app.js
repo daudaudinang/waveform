@@ -6,7 +6,7 @@ var wavesurfer = WaveSurfer.create({
   backgroundColor: "rgba(0,0,0,0)", // Màu nền
   barGap: 3, // Khoảng cách giữa 2 cột sóng
   barHeight: 1, // Chiều cao cột sóng
-  barWidth: 1, // Chiều rộng cột sóng
+  barWidth: 2, // Chiều rộng cột sóng
   cursorColor: "rgba(0,0,0,0)", //Màu con trỏ edge
   hideScrollbar: true, // Ẩn thanh cuộn
   // interact: false, // Có cho người dùng tương tác với thanh wave không? Hay chỉ cho xem thôi. mặc định là true
@@ -14,7 +14,7 @@ var wavesurfer = WaveSurfer.create({
   mediaType: "video", // Setup mediatype cho backend
   // mediaControls: true, // Setup = true để sử dụng controls mặc đỊnh của video element backend, mặc định là false
   partialRender: true, // Sử dụng peakCache để cải thiện tốc độ render
-  pixelRatio: 1,
+  pixelRatio: 2,
   progressColor: "rgb(31,159,252)", // Set màu proccess thành xanh
   waveColor: "#c4c4c4", // Set màu sóng thành xám
   responsive: true, // Resize wave khi container chứa nó thay đổi kích cỡ

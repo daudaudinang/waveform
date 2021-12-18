@@ -1425,11 +1425,11 @@ var MultiCanvas = /*#__PURE__*/function (_Drawer) {
           // Đây là
             if(intersection.y2 - intersection.y1 > 0){
               entry.fillRects(intersection.x1 - leftOffset, intersection.y1, intersection.x2 - intersection.x1, (intersection.y2 - intersection.y1)*0.5, radius);
-              this.setFillStyles(entry, waveColor, 'rgba(31,159,252,0.5)');
+              this.setFillStyles(entry, 'rgba(196, 196, 196,0.5)', 'rgba(31,159,252,0.5)');
               entry.fillRects(intersection.x1 - leftOffset, intersection.y1 + (intersection.y2 - intersection.y1)*0.5 + 1, intersection.x2 - intersection.x1, (intersection.y2 - intersection.y1)*0.2, radius);
             } else {
               entry.fillRects(intersection.x1 - leftOffset, intersection.y2, intersection.x2 - intersection.x1, (intersection.y1 - intersection.y2)*0.5, radius);
-              this.setFillStyles(entry, waveColor, 'rgba(31,159,252,0.5)');
+              this.setFillStyles(entry, 'rgba(196, 196, 196,0.5)', 'rgba(31,159,252,0.5)');
               entry.fillRects(intersection.x1 - leftOffset, intersection.y2 + (intersection.y1 - intersection.y2)*0.5 + 1, intersection.x2 - intersection.x1, (intersection.y1 - intersection.y2)*0.2, radius);
             } 
           // Đoạn code sửa đổi
