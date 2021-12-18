@@ -4,7 +4,7 @@ var wavesurfer = WaveSurfer.create({
   barRadius: 0, // Bo góc thanh bar
   autoCenter: true,
   backgroundColor: "rgba(0,0,0,0)", // Màu nền
-  barGap: 3, // Khoảng cách giữa 2 cột sóng
+  barGap: 2, // Khoảng cách giữa 2 cột sóng
   barHeight: 1, // Chiều cao cột sóng
   barWidth: 2, // Chiều rộng cột sóng
   cursorColor: "rgba(0,0,0,0)", //Màu con trỏ edge
