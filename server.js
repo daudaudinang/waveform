@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use("/", express.static(path.join(__dirname)));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/wavesurfer.js.html"));
+  res.sendFile(path.join(__dirname + "/wavesurfer.html"));
 })
 
 app.listen(3000);

@@ -16,7 +16,7 @@ var wavesurfer = WaveSurfer.create({
   partialRender: true, // Sử dụng peakCache để cải thiện tốc độ render
   pixelRatio: 2,
   progressColor: "rgb(31,159,252)", // Set màu proccess thành xanh
-  waveColor: "#c4c4c4", // Set màu sóng thành xám
+  waveColor: "rgb(196, 196, 196)", // Set màu sóng thành xám
   responsive: true, // Resize wave khi container chứa nó thay đổi kích cỡ
   scrollParent: true, // Set = true để wave tự chạy chứ k đứng im một chỗ
 });
