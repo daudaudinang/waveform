@@ -13,10 +13,17 @@ Sử dụng waveSurfer để tạo 1 Media Element thông qua các options: "bac
 WaveSurfer cung cấp cho chúng ta rất nhiều api để tua, thay đổi âm lượng, play/pause,... giống như các player khác. Nên ta hoàn toàn có thể tạo riêng biệt 2 player: 1 là waveSurfer và 1 là custom player của chúng ta, sau đó sử dụng API của 2 thằng để link với nhau :3
 Ví dụ: Khi play, thì ta phải gọi 2 api: videoElement.play() và wavesurfer.play()
 
-## Lưu ý
+## Lưu ý 1
 Wave trong WaveSurfer không có options hay API nào để custom cũng như chia wave ra thành 2 nửa, mỗi nửa có 1 độ dài khác nhau như theo yêu cầu đặt ra.
 Vậy nên, để làm được theo yêu cầu đặt ra em đã sửa cứng code thư viện wavesurfer.js. Nếu ta import thư viện gốc của wavesurfer vào app của chúng ta thì kết quả hiển thị sẽ khác.
 Dòng code sửa: 1425 -> 1435
+
+## Lưu ý 2
+Các Method được tích hợp sẵn trong player wavesurfer:
+https://wavesurfer-js.org/docs/methods.html
+
+Các option trong player wavesurfer:
+https://wavesurfer-js.org/docs/options.html
 
 ## Để chạy ví dụ
 npm start

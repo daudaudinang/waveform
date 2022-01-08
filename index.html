@@ -4,17 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <div id="waveform">
-            <i class="play-btn"></i>
-        </div>
+        <div id="waveform"></div>
     </div>
+    <button class="play-btn">Play/Pause</button>
+    <button class="mute-btn">Mute/Unmute</button>
+    <button class="skipForward-btn">Tua tới 5s</button>
+    <button class="skipBackward-btn">Tua lùi 5s</button>
+
     <script src="wavesurfer.js"></script>
-    <script src="app.js"></script>
+    <script>
+        var wavesurfer = WaveSurfer.create({
+        container: "#waveform", //Container chứa wave
+        height:120, // Chiều cao của cả thanh wave bar, mặc định: 128
+        barRadius: 0, // Bo góc thanh bar
+        autoCenter: true,
+        backgroundColor: "rgba(0,0,0,0)", // Màu nền
+        barGap: 2, // Khoảng cách giữa 2 cột sóng
+        barHeight: 1, // Chiều cao cột sóng
+        barWidth: 2, // Chiều rộng cột sóng
+        cursorColor: "rgba(0,0,0,0)", //Màu con trỏ edge
+        hideScrollbar: true, // Ẩn thanh cuộn
+        // interact: false, // Có cho người dùng tương tác với thanh wave không? Hay chỉ cho xem thôi. mặc định là true
+        // mediaControls: true, // Setup = true để sử dụng controls mặc đỊnh của video element backend, mặc định là false
+        partialRender: true, // Sử dụng peakCache để cải thiện tốc độ render
+        pixelRatio: 2,
+        progressColor: "rgb(31,159,252)", // Set màu proccess thành xanh
+        waveColor: "rgb(196, 196, 196)", // Set màu sóng thành xám
+        responsive: true, // Resize wave khi container chứa nó thay đổi kích cỡ
+        scrollParent: true, // Set = true để wave tự chạy chứ k đứng im một chỗ
+        });
+
+        wavesurfer.load("m4atest.m4a");
+        wavesurfer.on("ready", function () {
+
+            const playBtn = document.querySelector(".play-btn");
+            const muteBtn = document.querySelector(".mute-btn");
+            const skipForward = document.querySelector(".skipForward-btn");
+            const skipBackward = document.querySelector(".skipBackward-btn");
+
+            playBtn.onclick = () => {
+                wavesurfer.playPause();
+            }
+
+            muteBtn.onclick = () => {
+                wavesurfer.setMute(!wavesurfer.getMute());
+            }
+
+            skipForward.onclick = () => {
+                wavesurfer.skipForward(5);
+            }
+
+            skipBackward.onclick = () => {
+                wavesurfer.skipBackward(5);
+            }
+        });
+    </script>
 </body>
 </html>
